@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def search_with_urls(query: str, num_results=3):
+def search_with_urls(query: str, num_results=5):
     params = {
         "q": query,
         "api_key": os.getenv("SERPAPI_API_KEY"),
@@ -28,7 +28,7 @@ def search_with_urls(query: str, num_results=3):
 def extract_text_from_url(url: str, max_length=2000):
     headers = {"User-Agent": "Mozilla/5.0"}
     try:
-        response = requests.get(url, headers=headers, timeout=5)
+        response = requests.get(url, headers=headers, timeout=10)
         soup = BeautifulSoup(response.text, "html.parser")
         text = soup.get_text(separator="\n")
         return text.strip()[:max_length]
