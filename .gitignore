@@ -42,3 +42,9 @@ out/
 
 *.yml
 *.yaml
+
+# 가상환경
+.venv/
+
+# Python 환경 설정 파일
+*.env
