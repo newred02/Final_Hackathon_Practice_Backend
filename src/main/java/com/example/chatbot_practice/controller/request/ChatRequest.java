@@ -6,14 +6,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ChatRequest {
-    private String message;
+    private String review;
 
     public ChatRequest() {}
 
-    public ChatRequest(String message) {
-        this.message = message;
+    public ChatRequest(String review) {
+        this.review = review;
     }
 
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
+    public String getReview() { return review; }
+    public void setReview(String review) { this.review = review; }
 }
