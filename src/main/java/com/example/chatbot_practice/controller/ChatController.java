@@ -15,7 +15,7 @@ public class ChatController {
         this.aiService = aiService;
     }
 
-    @GetMapping("/chat")
+    @PostMapping("/chat")
     public String chat(@RequestBody ChatRequest chatRequest) {
         String response = aiService.getChatResponse(chatRequest);
         return response;
